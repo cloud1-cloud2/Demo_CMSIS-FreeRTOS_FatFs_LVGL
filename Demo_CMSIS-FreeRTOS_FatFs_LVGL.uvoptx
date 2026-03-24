@@ -170,7 +170,7 @@
         </Mm>
       </MemoryWindow1>
       <ScvdPack>
-        <Filename>E:\ARM\MDK-ARM\Packs\ARM\CMSIS-FreeRTOS\11.2.0\CMSIS\RTOS2\FreeRTOS\FreeRTOS.scvd</Filename>
+        <Filename>C:\Users\10636\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.2.0\CMSIS\RTOS2\FreeRTOS\FreeRTOS.scvd</Filename>
         <Type>ARM::CMSIS-FreeRTOS@11.2.0</Type>
         <SubType>1</SubType>
       </ScvdPack>

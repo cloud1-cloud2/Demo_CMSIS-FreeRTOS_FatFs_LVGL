@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>-AT32F403AVGT7</Device>
           <Vendor>ArteryTek</Vendor>
-          <PackID>ArteryTek.AT32F403A_407_DFP.2.2.2</PackID>
+          <PackID>ArteryTek.AT32F403A_407_DFP.2.2.3</PackID>
           <Cpu>IRAM(0x20000000,0x18000) IROM(0x08000000,0x100000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -48,7 +48,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>RTX_FatFs_LVGL__AT_START_F403A</OutputName>
+          <OutputName>Demo_CMSIS-FreeRTOS_FatFs_LVGL</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -585,6 +585,36 @@
   </Targets>
 
   <RTE>
+    <packages>
+      <filter>
+        <targetInfos/>
+      </filter>
+      <package name="CMSIS-Compiler" vendor="ARM" version="2.1.0">
+        <targetInfos>
+          <targetInfo name="AT32F403A_Debug" versionMatchMode="fixed"/>
+        </targetInfos>
+      </package>
+      <package name="CMSIS-FreeRTOS" vendor="ARM" version="11.2.0">
+        <targetInfos>
+          <targetInfo name="AT32F403A_Debug" versionMatchMode="fixed"/>
+        </targetInfos>
+      </package>
+      <package name="CMSIS" vendor="ARM" version="6.2.0">
+        <targetInfos>
+          <targetInfo name="AT32F403A_Debug" versionMatchMode="fixed"/>
+        </targetInfos>
+      </package>
+      <package name="AT32F403A_407_DFP" vendor="ArteryTek" version="2.2.3">
+        <targetInfos>
+          <targetInfo name="AT32F403A_Debug" versionMatchMode="fixed"/>
+        </targetInfos>
+      </package>
+      <package name="lvgl" vendor="LVGL" version="9.4.0">
+        <targetInfos>
+          <targetInfo name="AT32F403A_Debug" versionMatchMode="fixed"/>
+        </targetInfos>
+      </package>
+    </packages>
     <apis>
       <api Capiversion="1.1.0" Cclass="CMSIS-Compiler" Cgroup="OS Interface" condition="ARMCC CortexDevice" exclusive="1">
         <package name="CMSIS-Compiler" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="2.1.0"/>
@@ -851,7 +881,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_acc.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_acc.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="acc" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -859,7 +889,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_adc.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_adc.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="adc" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -873,7 +903,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_bpr.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_bpr.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="bpr" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -881,7 +911,7 @@
       <file attr="config" category="header" name="Device\Include\at32f403a_407_conf.h" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_conf.h</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_conf" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 CMSIS"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -889,7 +919,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_crm.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_crm.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="crm" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS MISC"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -897,7 +927,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_debug.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_debug.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="debug" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -905,7 +935,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_dma.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_dma.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="dma" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -913,7 +943,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_exint.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_exint.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="exint" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -921,7 +951,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_flash.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_flash.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="flash" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -929,7 +959,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_gpio.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_gpio.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="gpio" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -937,7 +967,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_i2c.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_i2c.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="i2c" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -945,7 +975,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_misc.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_misc.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="misc" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 CMSIS"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -953,7 +983,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_pwc.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_pwc.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="pwc" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -961,7 +991,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_rtc.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_rtc.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="rtc" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -969,7 +999,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_spi.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_spi.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="spi" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -977,7 +1007,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_tmr.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_tmr.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="tmr" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -985,7 +1015,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_usart.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_usart.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="usart" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -993,7 +1023,7 @@
       <file attr="config" category="source" name="Device\Firmware\Peripherals\src\at32f403a_407_usb.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\at32f403a_407_usb.c</instance>
         <component Cclass="Device" Cgroup="at32f403a_407_firmware_library" Csub="usb" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407 STDPERIPHERALS CRM"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -1001,7 +1031,7 @@
       <file attr="config" category="source" condition="AT32F403Axx ARMCC" name="Device\Source\ARM\startup_at32f403a_407.s" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\startup_at32f403a_407.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
@@ -1009,7 +1039,7 @@
       <file attr="config" category="source" name="Device\Source\system_at32f403a_407.c" version="2.0.0">
         <instance index="0">RTE\Device\-AT32F403AVGT7\system_at32f403a_407.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="ArteryTek" Cversion="2.0.0" condition="AT32F403A_407"/>
-        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.2"/>
+        <package name="AT32F403A_407_DFP" schemaVersion="1.2" url="" vendor="ArteryTek" version="2.2.3"/>
         <targetInfos>
           <targetInfo name="AT32F403A_Debug"/>
         </targetInfos>
